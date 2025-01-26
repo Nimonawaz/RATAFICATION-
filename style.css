@@ -1,139 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url() no-repeat center center fixed; /* Set the background image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a4724;
-    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8); /* Add transparency to the navbar */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 20px;
 }
 
 .navbar-item a {
-    color: rgb(233, 238, 235);
+    color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
 }
 
 .navbar-item a:hover {
-    background-color: #0d421e;
-    border-radius: 30px;
+    background-color: #575757;
+    border-radius: 5px;
 }
 
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-  }
-  
-  .input {
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    width: 100%;
-    padding-left: 2.5rem;
-    outline: none;
-    background: linear-gradient(180deg,     rgb(56, 56, 56) 0%, rgb(36, 36, 36)   66%, rgb(41, 41, 41) 100%);
-    color: #fff;
-    transition: .3s ease;
-    border: 2px solid;
-    border-image: conic-gradient( #00F260, #0575E6,#64f38c) 1;
-  }
-  
-  .input::placeholder {
-    color: #fff;
-  }
-  
-  .input:focus::placeholder {
-    color: #999;
-  }
-  
-  .icon {
-    position: absolute;
-    left: 1rem;
-    fill: #fff;
-    width: 1rem;
-    height: 1rem;
-  }
-  
-  /* From Uiverse.io by 0800Gonza */ 
-.card {
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
+.search-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
-  }
-  
-  /* for all social containers*/
-  .socialContainer {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background-color: rgb(44, 44, 44);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #fff;
+    border-radius: 5px;
     overflow: hidden;
-    transition-duration: 1s;
-  }
-  /* instagram*/
-  .containerOne:hover {
-    background-color: #d62976;
-    transition-duration: 0.3s;
-  }
-  /* twitter*/
-  .containerTwo:hover {
-    background-color: #00acee;
-    transition-duration: 0.3s;
-  }
-  /* linkdin*/
-  .containerThree:hover {
-    background-color: #0072b1;
-    transition-duration: 0.3s;
-  }
-  /* Whatsapp*/
-  .containerFour:hover {
-    background-color: #128c7e;
-    transition-duration: 0.3s;
-  }
-  
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: rgb(255, 255, 255);
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 40%;
+}
 
-  
+.search-input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #575757;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+img {
+    size-adjust: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+
+h1 {
+    text-align: center;
+    align-self: start;
+    border-style: outset;
+    color: #000000;
+    margin: 20px 0;
+}
+
+
+.ul {
+    display: flex;
+  display: grid;
+  text-shadow: #185e33;
+  gap: 10px 20px;
+  flex: 1 30px;
+  justify-content: center;
+  margin: 5% 0;
+  padding: 1em; 
+}
+
+.list-menu a {
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  color: rgb(46, 43, 43);
+    background-color: #535050;
+  box-shadow: inset 0 0 0 1px rgb(46, 43, 43);
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.list-menu a:hover {
+  background-color: #7c7272;
+  border-radius: 5px;
+}
+
+.horizontal-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.list-item {
+    text-align: center;
+    flex: 1 1 200px; /* Allow items to grow and shrink, with a minimum width of 200px */
+    margin: 10px;
+}
+
+.list-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+}
+
+.list-item a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.list-item a:hover {
+    text-decoration: underline;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-height: 56px; /* Set the maximum height */
+    min-height: 48px; /* Set the minimum height */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .horizontal-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
